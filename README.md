@@ -9,3 +9,10 @@ Base Alpine container for production Docker apps
 ## Configuration
 * .bashrc
 * .dircolors
+
+## Build
+```bash
+git clone https://github.com/phR0ze/alpine-base
+cd alpine-base
+docker build -t alpine-base .
+```

@@ -9,7 +9,7 @@ shopt -s checkwinsize
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-alias ll='ls -lah --color=auto'
+alias ll='ls -lah --color=auto --group-directories-first'
 
 none="\[\e[0m\]"
 cyber="\[\e[1;38;5;67m\]"

@@ -12,7 +12,17 @@ Base Alpine container for production Docker apps
 
 ## Build
 ```bash
-git clone https://github.com/phR0ze/alpine-base
-cd alpine-base
-docker build -t alpine-base .
+$ git clone https://github.com/phR0ze/alpine-base
+$ cd alpine-base
+$ docker build -t alpine-base .
+```
+
+## Use from dockerhub
+```bash
+$ docker pull phr0ze/alpine-base
+```
+
+## Update in dockerhub
+```bash
+$ docker push phr0ze/alpine-base:tagname
 ```

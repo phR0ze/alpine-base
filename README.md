@@ -2,8 +2,11 @@
 Base Alpine container for production Docker apps
 
 ## Apps
+Note: `busybox` is included by default with the `alpine` base image.
+
 * bash - 684 kB
 * bash-completion - 2.09 MB
+* busybox - 884 kB
 * curl - 196 kB
 
 ## Configuration

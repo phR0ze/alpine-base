@@ -20,15 +20,15 @@ https://pkgs.alpinelinux.org/packages
 ```bash
 $ git clone https://github.com/phR0ze/alpine-base
 $ cd alpine-base
-$ docker build -t alpine-base:3.9 .
+$ docker build -t base:3.9 .
 ```
 
 ## Use from dockerhub
 ```bash
-$ docker pull phr0ze/alpine-base
+$ docker pull phr0ze/base
 ```
 
 ## Update in dockerhub
 ```bash
-$ docker push phr0ze/alpine-base:tagname
+$ docker push phr0ze/base:tagname
 ```

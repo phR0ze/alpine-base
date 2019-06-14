@@ -2,12 +2,15 @@
 Base Alpine container for production Docker apps
 
 ## Apps
-Note: `busybox` is included by default with the `alpine` base image.
+Note: `busybox` is included by default with the `alpine` image.
 
+https://pkgs.alpinelinux.org/packages
 * bash - 684 kB
 * bash-completion - 2.09 MB
 * busybox - 884 kB
-* curl - 196 kB
+* ca-certificates - 720 kB
+* ca-certificates-cacert - 240 kB
+* curl - 228 kB
 
 ## Configuration
 * .bashrc

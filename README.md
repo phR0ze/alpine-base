@@ -20,7 +20,7 @@ https://pkgs.alpinelinux.org/packages
 ```bash
 $ git clone https://github.com/phR0ze/alpine-base
 $ cd alpine-base
-$ docker build -t alpine-base .
+$ docker build -t alpine-base:3.9 .
 ```
 
 ## Use from dockerhub

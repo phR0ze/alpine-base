@@ -49,15 +49,15 @@ Included by `alpine` by default i.e. `docker run --rm alpine:3.10 apk info`:
 ```bash
 $ git clone https://github.com/phR0ze/alpine-base
 $ cd alpine-base
-$ docker build -t base:3.9 .
+$ docker build -t alpine-base:3.9 .
 ```
 
 ## Use from dockerhub
 ```bash
-$ docker pull phr0ze/base
+$ docker pull phr0ze/alpine-base
 ```
 
 ## Update in dockerhub
 ```bash
-$ docker push phr0ze/base:tagname
+$ docker push phr0ze/alpine-base:tagname
 ```

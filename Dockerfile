@@ -5,6 +5,5 @@ RUN echo ">> Install/configure base" && \
   bash \
   bash-completion \
   ca-certificates \
-  ca-certificates-cacert \
   curl
 COPY config/* /root/

@@ -1,4 +1,7 @@
-# alpine-base
+alpine-base
+====================================================================================================
+[![Action Status](https://github.com/phR0ze/alpine-base/workflows/build/badge.svg)](https://github.com/phR0ze/alpine-base/actions)
+
 Base Alpine container for production Docker apps
 
 **Docker Image Size: 12MB**

@@ -49,7 +49,7 @@ Included by `alpine` by default i.e. `docker run --rm alpine:3.11 apk info`:
 * .bashrc
 * .dircolors
 
-## Use from github packages
+## Use from DockerHub
 ```bash
-$ docker pull docker.pkg.github.com/phr0ze/alpine-base
+$ docker pull phr0ze/alpine-base
 ```

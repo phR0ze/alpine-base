@@ -24,11 +24,12 @@ jobs:
         docker tag alpine-base:${{steps.release.outputs.tag}} docker.pkg.github.com/phr0ze/alpine-base/alpine-base:${{steps.release.outputs.tag}}
         docker tag alpine-base:${{steps.release.outputs.tag}} docker.pkg.github.com/phr0ze/alpine-base/alpine-base:latest
 
-    # Loging to GitHub packages
-    - name: Login to GitHub Packages
-      run: docker login docker.pkg.github.com -u $GITHUB_ACTOR -p $GITHUB_TOKEN
+    # Login to DockerHub
+    - name: Login to DockerHub
+      run: docker login -u $DOCKER_USER -p ${{secrets.TEST1}}
       env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}    
+          DOCKERHUB_USER: ${{secrets.TEST1}}    
+          DOCKERHUB_PASS: ${{secrets.TEST1}}    
 
     # Publish image
     - name: Publish Docker image with release tag and latest

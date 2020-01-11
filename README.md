@@ -23,7 +23,7 @@ Additional apps included which pull in their own dependencies:
 | `libssh2`                 | 71.45 kB  | 176 kB    | library for accessing ssh1/ssh2 protocol servers
 | `libcurl`                 | 206.88 kB | 444 kB    | The multiprotocol file transfer library
 
-Included by `alpine` by default i.e. `docker run --rm alpine:3.10 apk info`:
+Included by `alpine` by default i.e. `docker run --rm alpine:3.11 apk info`:
 
 | Package                   | Size      | Installed | Description
 | ------------------------- | --------- | --------- | ------------------------------------------
@@ -45,19 +45,7 @@ Included by `alpine` by default i.e. `docker run --rm alpine:3.10 apk info`:
 * .bashrc
 * .dircolors
 
-## Build
+## Use from github packages
 ```bash
-$ git clone https://github.com/phR0ze/alpine-base
-$ cd alpine-base
-$ docker build -t alpine-base:3.9 .
-```
-
-## Use from dockerhub
-```bash
-$ docker pull phr0ze/alpine-base
-```
-
-## Update in dockerhub
-```bash
-$ docker push phr0ze/alpine-base:tagname
+$ docker pull docker.pkg.github.com/phr0ze/alpine-base
 ```

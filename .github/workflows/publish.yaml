@@ -16,16 +16,22 @@ jobs:
 
     # Build image
     - name: Build Docker image with release tag
-      run: docker build . -f Dockerfile -t alpine-base:${{ steps.release.outputs.tag }}
+      run: docker build . -f Dockerfile -t alpine-base:${{steps.release.outputs.tag}}
 
     # Tag image for publishing
     - name: Build Docker image latest
       run: |
-        docker tag alpine-base:${{ steps.release.outputs.tag }} docker.pkg.github.com/phr0ze/alpine-base/alpine-base:${{ steps.release.outputs.tag }}
-        docker tag alpine-base:${{ steps.release.outputs.tag }} docker.pkg.github.com/phr0ze/alpine-base/alpine-base:latest
+        docker tag alpine-base:${{steps.release.outputs.tag}} docker.pkg.github.com/phr0ze/alpine-base/alpine-base:${{steps.release.outputs.tag}}
+        docker tag alpine-base:${{steps.release.outputs.tag}} docker.pkg.github.com/phr0ze/alpine-base/alpine-base:latest
+
+    # Loging to GitHub packages
+    - name: Login to GitHub Packages
+      run: docker login docker.pkg.github.com -u $GITHUB_ACTOR -p $GITHUB_TOKEN
+      env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}    
 
     # Publish image
     - name: Publish Docker image with release tag and latest
       run: |
-        docker push docker.pkg.github.com/phr0ze/alpine-base/alpine-base:${{ steps.release.outputs.tag }}
+        docker push docker.pkg.github.com/phr0ze/alpine-base/alpine-base:${{steps.release.outputs.tag}}
         docker push docker.pkg.github.com/phr0ze/alpine-base/alpine-base:latest

@@ -26,10 +26,7 @@ jobs:
 
     # Login to DockerHub
     - name: Login to DockerHub
-      run: docker login -u $DOCKER_USER -p ${{secrets.TEST1}}
-      env:
-          DOCKERHUB_USER: ${{secrets.TEST1}}    
-          DOCKERHUB_PASS: ${{secrets.TEST1}}    
+      run: echo ${{secrets.TEST1_PASS}} | docker login -u ${{secrets.TEST1}} --password-stdin
 
     # Publish image
     - name: Publish Docker image with release tag and latest

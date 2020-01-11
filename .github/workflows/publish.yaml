@@ -21,8 +21,8 @@ jobs:
     # Tag image for publishing
     - name: Build Docker image latest
       run: |
-        docker tag alpine-base:${{steps.release.outputs.tag}} docker.pkg.github.com/phr0ze/alpine-base/alpine-base:${{steps.release.outputs.tag}}
-        docker tag alpine-base:${{steps.release.outputs.tag}} docker.pkg.github.com/phr0ze/alpine-base/alpine-base:latest
+        docker tag alpine-base:${{steps.release.outputs.tag}} phr0ze/alpine-base:${{steps.release.outputs.tag}}
+        docker tag alpine-base:${{steps.release.outputs.tag}} phr0ze/alpine-base:latest
 
     # Login to DockerHub
     - name: Login to DockerHub
@@ -31,5 +31,5 @@ jobs:
     # Publish image
     - name: Publish Docker image with release tag and latest
       run: |
-        docker push docker.pkg.github.com/phr0ze/alpine-base/alpine-base:${{steps.release.outputs.tag}}
-        docker push docker.pkg.github.com/phr0ze/alpine-base/alpine-base:latest
+        docker push phr0ze/alpine-base:${{steps.release.outputs.tag}}
+        docker push phr0ze/alpine-base:latest

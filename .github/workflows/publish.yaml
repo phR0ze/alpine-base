@@ -18,12 +18,14 @@ jobs:
     - name: Build Docker image with release tag
       run: docker build . -f Dockerfile -t alpine-base:${{ steps.release.outputs.tag }}
 
-    # Tag latest image
+    # Tag image for publishing
     - name: Build Docker image latest
-      run: docker tag alpine-base:${{ steps.release.outputs.tag }} alpine-base:latest
+      run: |
+        docker tag alpine-base:${{ steps.release.outputs.tag }} docker.pkg.github.com/phr0ze/alpine-base/alpine-base:${{ steps.release.outputs.tag }}
+        docker tag alpine-base:${{ steps.release.outputs.tag }} docker.pkg.github.com/phr0ze/alpine-base/alpine-base:latest
 
-    # Publish both images/tags
-    - name: Publish both images/tags
+    # Publish image
+    - name: Publish Docker image with release tag and latest
       run: |
         docker push docker.pkg.github.com/phr0ze/alpine-base/alpine-base:${{ steps.release.outputs.tag }}
         docker push docker.pkg.github.com/phr0ze/alpine-base/alpine-base:latest

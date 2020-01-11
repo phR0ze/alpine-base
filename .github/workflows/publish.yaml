@@ -25,5 +25,5 @@ jobs:
     # Publish both images/tags
     - name: Publish both images/tags
       run: |
-        docker push docker.pkg.github.com/phR0ze/alpine-base/alpine-base:${{ steps.release.outputs.tag }}
-        docker push docker.pkg.github.com/phR0ze/alpine-base/alpine-base:latest
+        docker push docker.pkg.github.com/phr0ze/alpine-base/alpine-base:${{ steps.release.outputs.tag }}
+        docker push docker.pkg.github.com/phr0ze/alpine-base/alpine-base:latest

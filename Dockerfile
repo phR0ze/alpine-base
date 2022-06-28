@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.16
 
 RUN echo ">> Install/configure base" && \
   apk add --no-cache \

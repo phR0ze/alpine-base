@@ -1,7 +1,7 @@
 alpine-base
 ====================================================================================================
 [![build-badge](https://github.com/phR0ze/alpine-base/workflows/Build%20Docker%20Image/badge.svg)](https://github.com/phR0ze/alpine-base/actions)
-[![docker-badge](https://images.microbadger.com/badges/version/phr0ze/alpine-base.svg)](https://microbadger.com/images/phr0ze/alpine-base)
+![docker-badge](https://img.shields.io/docker/v/phr0ze/alpine-base)
 
 Base Alpine container for production with minimal tooling
 
